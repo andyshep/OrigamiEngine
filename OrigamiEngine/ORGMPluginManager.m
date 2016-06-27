@@ -72,7 +72,7 @@
         
         Class class;
         if ((class = NSClassFromString(@"FlacDecoder"))) [self registerDecoder:class forFileTypes:@[ @"flac" ]];
-        if ((class = NSClassFromString(@"OpusFileDecoder"))) [self registerDecoder:class forFileTypes:@[ @"opus" ]];
+        if ((class = NSClassFromString(@"OpusFileDecoder"))) [self registerDecoder:class forFileTypes:@[ @"opus", @"oga" ]];
         
         /* Containers */        
         NSMutableDictionary *containersDict = [NSMutableDictionary dictionary];
