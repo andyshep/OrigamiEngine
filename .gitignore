@@ -1,0 +1,12 @@
+# Xcode
+.DS_Store
+*.pbxuser
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+project.xcworkspace
+Pods
+*.ipa
+*.dSYM.zip
+
