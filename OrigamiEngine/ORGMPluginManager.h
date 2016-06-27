@@ -31,7 +31,6 @@
  The `ORGMPluginResoler` provides uniform interface for implementing custom plugin resolution rules within plugin manager. By implementing custom resolver and registering it within plugin manager, you can modify default behaviour of the plugin manager. If you want to fallback to the default resolution process you can return `nil`.
  */
 @protocol ORGMPluginResolver <NSObject>
-@optional
 - (id<ORGMSource>)sourceForURL:(NSURL *)url error:(NSError **)error;
 - (id<ORGMDecoder>)decoderForSource:(id<ORGMSource>)source error:(NSError **)error;
 - (NSArray *)urlsForContainerURL:(NSURL *)url error:(NSError **)error;
