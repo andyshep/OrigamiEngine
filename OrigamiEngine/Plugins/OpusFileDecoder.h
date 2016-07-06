@@ -25,4 +25,6 @@
 
 @interface OpusFileDecoder : NSObject <ORGMDecoder>
 
++ (bool)canPlayFile:(NSString *)path;
+
 @end

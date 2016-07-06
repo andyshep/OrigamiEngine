@@ -41,6 +41,20 @@
 
 #pragma mark - ORGMDecoder
 
++ (bool)canPlayFile:(NSString *)path
+{
+    int error = OPUS_OK;
+    OggOpusFile *file = op_test_file([path UTF8String], &error);
+    if (file != NULL)
+    {
+        error = op_test_open(file);
+        op_free(file);
+        
+        return error == OPUS_OK;
+    }
+    return false;
+}
+
 + (NSArray *)fileTypes {
 	return [NSArray arrayWithObjects:@"opus", nil];
 }
