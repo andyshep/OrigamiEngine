@@ -1,3 +1,8 @@
+Changes by janandre
+--------
+Included Audio-Frameworks Submodule Data directly to the master branch. This is to avoid cocoapods problems with subspecs & submodules from a forked repo. Use pod 'OrigamiEngine/Opus', git: ....
+
+
 Lightweight iOS and OSX audio engine with opus, flac, cue, mp3, m4a, m3u support.
 
 
