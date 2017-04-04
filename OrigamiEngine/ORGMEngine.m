@@ -73,6 +73,10 @@
     dispatch_async([ORGMQueues processing_queue], ^{
         self.currentError = nil;
 
+        if (self.input) {
+            [_input removeObserver: self forKeyPath: @"endOfInput"];
+        }
+        
         ORGMInputUnit *input = [[ORGMInputUnit alloc] init];
         self.input = input;
         [input release];
