@@ -140,7 +140,7 @@ const NSTimeInterval readTimeout = 1.0;
         [data getBytes:buffer length:data.length];
         _bytesRead += data.length;
 
-        result = data.length;
+        result = (int)data.length;
     }
 
     return result;

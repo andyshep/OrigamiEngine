@@ -73,7 +73,7 @@
 }
 
 - (int)read:(void *)buffer amount:(int)amount {
-	return fread(buffer, 1, amount, _fd);
+	return (int)fread(buffer, 1, amount, _fd);
 }
 
 - (void)close {

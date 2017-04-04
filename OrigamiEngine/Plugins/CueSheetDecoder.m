@@ -80,7 +80,7 @@
 
 - (int)readAudio:(void *)buf frames:(UInt32)frames {
 	if (framePosition + frames > trackEnd) {
-		frames = trackEnd - framePosition;
+		frames = (int)(trackEnd - framePosition);
 	}
     
 	if (!frames) {

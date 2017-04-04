@@ -190,7 +190,7 @@ FLAC__StreamDecoderReadStatus ReadCallback(const FLAC__StreamDecoder *decoder,
                                            size_t *bytes,
                                            void *client_data) {
 	FlacDecoder *flacDecoder = (FlacDecoder *)client_data;
-	*bytes = [[flacDecoder source] read:blockBuffer amount:*bytes];
+	*bytes = [[flacDecoder source] read:blockBuffer amount:(int)*bytes];
     
     if(*bytes == 0) {
 		[flacDecoder setEndOfStream:YES];

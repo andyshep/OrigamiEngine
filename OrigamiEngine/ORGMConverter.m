@@ -125,7 +125,7 @@
 }
 
 - (int)shiftBytes:(NSUInteger)amount buffer:(void *)buffer {
-    int bytesToRead = MIN(_convertedData.length, amount);
+    int bytesToRead = (int)MIN(_convertedData.length, amount);
 
     dispatch_sync([ORGMQueues lock_queue], ^{
         memcpy(buffer, _convertedData.bytes, bytesToRead);
