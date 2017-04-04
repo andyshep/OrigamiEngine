@@ -103,7 +103,7 @@
         });
     } while (framesRead > 0);
 
-    if (framesRead <= 0) {
+    if (framesRead <= 0 && !_endOfInput) {
         [self setEndOfInput:YES];
     }
 
