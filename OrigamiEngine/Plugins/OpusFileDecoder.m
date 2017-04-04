@@ -62,7 +62,7 @@
 }
 
 + (NSArray *)fileTypes {
-	return [NSArray arrayWithObjects:@"opus", nil];
+	return [NSArray arrayWithObjects:@"opus", @"oga", @"ogg", nil];
 }
 
 - (NSDictionary *)properties {
