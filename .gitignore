@@ -10,3 +10,4 @@ Pods
 *.ipa
 *.dSYM.zip
 
+**/*.xcworkspace/xcshareddata/*
